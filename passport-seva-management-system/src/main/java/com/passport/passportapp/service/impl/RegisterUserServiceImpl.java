@@ -32,10 +32,9 @@ public class RegisterUserServiceImpl implements RegisterUserService {
 
 
         if(isGivenNameValid  && isPasswordValid && isConfirmPassword) {
-                      // set user Id dynamically      dto.setUserId(// );
+            // set user Id dynamically      dto.setUserId(// );
             userSaved = registerUserRepository.saveUser(dto);
         }
-
            return userSaved;
     }
 }

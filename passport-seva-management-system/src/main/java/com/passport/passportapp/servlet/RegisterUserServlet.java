@@ -15,10 +15,15 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/registerUser")
 public class RegisterUserServlet extends HttpServlet {
 
+      public RegisterUserServlet(){
+          System.out.println("RegisterUserServlet object is created");
+      }
+
     RegisterUserService registerUserService;
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doXXX via service ");
         String   givenName =    req.getParameter("givenName");
          String surName                 =      req.getParameter("surName");
         String emailId                  =       req.getParameter("emailId");
